@@ -33,7 +33,7 @@ import testData.FormData;
 			FileUpload.clickOnDiploma();
 			TextFields.getDoctorNoField().sendKeys(FormData.generateDoctorNo());
 			RadioButtons.chooseEmployment().click();
-			provideEmploymentData();
+			//provideEmploymentData();
 
 		}
 	}
