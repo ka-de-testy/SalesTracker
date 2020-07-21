@@ -9,6 +9,19 @@ import pageObjects.TextFields;
 import testData.FormData;
 
 	public class FillTheForm extends FormData {
+		
+		public static void getUrl() {
+
+			baseUrl = "http://serwer1419259.home.pl/tester/index.php/site/form/52";
+
+		}
+
+		public static void goToForm() {
+
+			driver.get(baseUrl);
+			driver.manage().window().maximize();
+		}
+		
 
 		public static void provideEmploymentData() {
 
@@ -22,7 +35,8 @@ import testData.FormData;
 
 		public static void writeIntoForm() throws IOException {
 
-
+			FormData.getUrl();
+			FormData.goToForm();
 			TextFields.getImieField().sendKeys(first_name);
 			TextFields.getNazwiskoField().sendKeys(last_name);
 			RadioButtons.choosePlec().click();

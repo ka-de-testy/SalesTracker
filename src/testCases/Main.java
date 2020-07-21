@@ -10,17 +10,6 @@ import utilities.StaticElements;
 	public class Main extends StaticElements {
 		
 		
-		public static void getUrl() {
-
-			baseUrl = "http://serwer1419259.home.pl/tester/index.php/site/form/52";
-
-		}
-
-		public static void goToForm() {
-
-			driver.get(baseUrl);
-			driver.manage().window().maximize();
-		}
 		
 		
 		static boolean run() {
@@ -29,8 +18,7 @@ import utilities.StaticElements;
 			
 			
 			try {
-				FormData.getUrl();
-				FormData.goToForm();
+				
 				FillTheForm.writeIntoForm();
 
 	// I'm not sure why this method has to be separately invoked from main
